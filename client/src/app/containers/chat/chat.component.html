@@ -1,0 +1,18 @@
+<section>
+  <div class="container">
+    <app-username
+      (userNameEvent)="userNameUpdate($event)"
+      *ngIf="!userName"
+    ></app-username>
+    <h1>Well-Chat</h1>
+
+    <div class="chatbox">
+      <div class="chatbox-userlist">
+        <h2>User List</h2>
+        <div class="chatbox-user-active"><p></p></div>
+      </div>
+
+      <div class="message-list"><div class="chatbox-messages"></div></div>
+    </div>
+  </div>
+</section>
