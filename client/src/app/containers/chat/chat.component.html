@@ -9,7 +9,12 @@
     <div class="chatbox">
       <div class="chatbox-userlist">
         <h2>User List</h2>
-        <div class="chatbox-user-active"><p></p></div>
+        <div
+          class="chatbox-user-active"
+          *ngFor="let userName of userList$ | async"
+        >
+          <p>{{ userName }}</p>
+        </div>
       </div>
 
       <div class="message-list"><div class="chatbox-messages"></div></div>
